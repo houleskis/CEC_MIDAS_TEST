@@ -5,7 +5,7 @@ import json
 
 def GetPrice(token, rateID, queryType):
     headers = {'accept': 'application/json', 'Authorization': "Bearer " + token}
-    url = 'https://cecwats2.org/api/pricedata?id=' + rateID + '&querytype=' + QueryType
+    url = 'https://cecwats2.org/api/valuedata?id=' + rateID + '&querytype=' + queryType
     pricing_response = requests.get(url, headers=headers)
 
     return (json.loads(pricing_response.text))
